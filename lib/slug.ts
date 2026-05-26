@@ -16,12 +16,28 @@ export const BOOK_SLUGS: Record<string, string> = {
   '飛狐外傳': 'feihu',
 };
 
+export const REVIEW_SLUGS: Record<string, string> = {
+  '編年和人物大全': 'review-1',
+  '曾經江湖': 'review-2',
+  '流轉江湖': 'review-3',
+  '再會江湖': 'review-4',
+  '正與邪': 'review-5',
+  '六神磊磊-你我皆凡人': 'review-6',
+  '六神磊磊-現實江湖': 'review-7',
+};
+
 export const SLUG_TO_TITLE: Record<string, string> = Object.fromEntries(
-  Object.entries(BOOK_SLUGS).map(([title, slug]) => [slug, title]),
+  [...Object.entries(BOOK_SLUGS), ...Object.entries(REVIEW_SLUGS)].map(
+    ([title, slug]) => [slug, title],
+  ),
 );
 
 export function titleToSlug(title: string): string | undefined {
   return BOOK_SLUGS[title];
+}
+
+export function reviewTitleToSlug(title: string): string | undefined {
+  return REVIEW_SLUGS[title];
 }
 
 export function slugToTitle(slug: string): string | undefined {

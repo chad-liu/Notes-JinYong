@@ -4,10 +4,11 @@ import { useRouter, useParams } from 'next/navigation';
 import type { BookMeta } from '@/lib/books';
 
 interface Props {
-  books: BookMeta[];
+  novels: BookMeta[];
+  reviews: BookMeta[];
 }
 
-export default function TopBar({ books }: Props) {
+export default function TopBar({ novels, reviews }: Props) {
   const router = useRouter();
   const params = useParams<{ bookSlug?: string }>();
   const currentSlug = params?.bookSlug;
@@ -37,11 +38,20 @@ export default function TopBar({ books }: Props) {
           <option value="" disabled>
             選擇書籍…
           </option>
-          {books.map((b) => (
-            <option key={b.slug} value={b.slug}>
-              {b.title}
-            </option>
-          ))}
+          <optgroup label="金庸小說">
+            {novels.map((b) => (
+              <option key={b.slug} value={b.slug}>
+                {b.title}
+              </option>
+            ))}
+          </optgroup>
+          <optgroup label="評論">
+            {reviews.map((b) => (
+              <option key={b.slug} value={b.slug}>
+                {b.title}
+              </option>
+            ))}
+          </optgroup>
         </select>
       </div>
       <div

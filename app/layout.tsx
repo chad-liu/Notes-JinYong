@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Noto_Sans_TC } from 'next/font/google';
-import { getAllBooks } from '@/lib/books';
+import { getNovels, getReviews } from '@/lib/books';
 import TopBar from './components/TopBar';
 import './globals.css';
 
@@ -21,13 +21,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const books = getAllBooks();
+  const novels = getNovels();
+  const reviews = getReviews();
 
   return (
     <html lang="zh-Hant" className={notoSansTC.variable}>
       <body className="font-sans">
         <div className="flex h-screen flex-col">
-          <TopBar books={books} />
+          <TopBar novels={novels} reviews={reviews} />
           <div className="flex flex-1 overflow-hidden">{children}</div>
         </div>
       </body>
