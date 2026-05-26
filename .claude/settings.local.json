@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd /d D:\\\\Notes-JinYong)",
+      "Bash(where pnpm *)",
+      "PowerShell(\\(Get-Command pwsh, node, npm, pnpm -ErrorAction SilentlyContinue | Select-Object Name, Source | Format-Table -AutoSize | Out-String\\).Trim\\(\\))",
+      "PowerShell(npm install 2>&1)",
+      "PowerShell(@\\('/tianlong-babu/0/', '/luding/0/', '/luding/49/', '/yitian/0/', '/baima/0/'\\) | ForEach-Object { try { $r = Invoke-WebRequest -Uri \"http://localhost:3000$_\" -ErrorAction Stop; Write-Output \\(\"OK  {0,-25} status={1} len={2}\" -f $_, $r.StatusCode, $r.RawContentLength\\) } catch { Write-Output \\(\"ERR {0,-25} {1}\" -f $_, $_.Exception.Message\\) } })"
+    ]
+  }
+}
