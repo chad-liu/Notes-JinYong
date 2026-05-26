@@ -106,6 +106,9 @@ export default function TopBar({ novels, reviews }: Props) {
           </optgroup>
         </select>
 
+      </div>
+
+      <div className="flex items-center gap-3">
         {/* 字級控制 */}
         <div className="flex items-center gap-1">
           <button
@@ -132,9 +135,7 @@ export default function TopBar({ novels, reviews }: Props) {
             A+
           </button>
         </div>
-      </div>
 
-      <div className="flex items-center gap-3">
         {/* 日/夜切換 */}
         <button
           onClick={toggleTheme}
@@ -145,11 +146,12 @@ export default function TopBar({ novels, reviews }: Props) {
         >
           {theme === 'light' ? '🌙' : '☀️'}
         </button>
+
         <div
           className="text-sm font-medium tracking-widest"
           style={{ color: 'var(--fg-muted)' }}
         >
-          金庸文庫
+          金庸武俠與評論
         </div>
       </div>
     </header>
