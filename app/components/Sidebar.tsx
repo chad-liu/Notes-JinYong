@@ -73,9 +73,6 @@ export default function Sidebar({
       >
         <div>
           <div className="text-sm font-semibold tracking-wider">{bookTitle}</div>
-          <div className="text-xs" style={{ color: 'var(--fg-muted)' }}>
-            金庸　著
-          </div>
         </div>
         <button
           onClick={toggle}
