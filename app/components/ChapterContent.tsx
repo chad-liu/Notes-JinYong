@@ -51,6 +51,7 @@ export default function ChapterContent({
         </h1>
         <div
           className="chapter-body"
+          style={{ fontSize: 'var(--reading-font-size, 17px)' }}
           dangerouslySetInnerHTML={{ __html: chapterHtml }}
         />
       </article>
