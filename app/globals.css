@@ -49,6 +49,10 @@ body {
   margin-top: 0.55em;
 }
 
+.chapter-body br + br {
+  display: none;
+}
+
 .chapter-body p {
   margin: 0 0 1em;
 }
