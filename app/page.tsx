@@ -1,7 +1,10 @@
-import { redirect } from 'next/navigation';
-import { getDefaultBookSlug } from '@/lib/books';
-
 export default function Home() {
-  const slug = getDefaultBookSlug();
-  redirect(`/${slug}/0/`);
+  return (
+    <main
+      className="flex flex-1 items-center justify-center"
+      style={{ color: 'var(--fg-muted)' }}
+    >
+      <p className="text-sm tracking-widest">請從上方選擇書籍</p>
+    </main>
+  );
 }
