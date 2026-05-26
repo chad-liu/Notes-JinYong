@@ -43,15 +43,6 @@ body {
   color: var(--fg);
 }
 
-.chapter-body br {
-  display: block;
-  content: '';
-  margin-top: 0.55em;
-}
-
-.chapter-body br + br + br {
-  display: none;
-}
 
 .chapter-body p {
   margin: 0 0 1em;

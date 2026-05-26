@@ -11,6 +11,11 @@ interface Props {
   total: number;
 }
 
+function processHtml(html: string): string {
+  // 把 3 個以上連續的 <br /> 壓縮成 2 個，保留最多一行空白
+  return html.replace(/(<br\s*\/?>(\s|&nbsp;)*){3,}/gi, '<br /><br />');
+}
+
 export default function ChapterContent({
   bookSlug,
   chapterTitle,
@@ -18,6 +23,7 @@ export default function ChapterContent({
   currentIndex,
   total,
 }: Props) {
+  const processedHtml = processHtml(chapterHtml);
   const router = useRouter();
   const hasPrev = currentIndex > 0;
   const hasNext = currentIndex < total - 1;
@@ -52,7 +58,7 @@ export default function ChapterContent({
         <div
           className="chapter-body"
           style={{ fontSize: 'var(--reading-font-size, 17px)' }}
-          dangerouslySetInnerHTML={{ __html: chapterHtml }}
+          dangerouslySetInnerHTML={{ __html: processedHtml }}
         />
       </article>
       <nav
