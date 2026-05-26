@@ -24,6 +24,27 @@
   }
 }
 
+/* 手動切換：class 優先於 media query */
+html.dark {
+  --bg: #0f1115;
+  --bg-elevated: #161a22;
+  --border: #2a2f3a;
+  --fg: #e5e7eb;
+  --fg-muted: #9ca3af;
+  --accent: #60a5fa;
+  --accent-soft: #1e3a5f;
+}
+
+html.light {
+  --bg: #ffffff;
+  --bg-elevated: #f7f8fa;
+  --border: #e5e7eb;
+  --fg: #1f2933;
+  --fg-muted: #6b7280;
+  --accent: #2563eb;
+  --accent-soft: #dbeafe;
+}
+
 html,
 body {
   height: 100%;
