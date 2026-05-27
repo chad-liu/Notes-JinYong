@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter, useParams } from 'next/navigation';
+import Link from 'next/link';
 import type { BookMeta } from '@/lib/books';
 
 interface Props {
@@ -105,6 +106,17 @@ export default function TopBar({ novels, reviews }: Props) {
             ))}
           </optgroup>
         </select>
+
+        {/* 回首頁 */}
+        <Link
+          href="/"
+          className="rounded border px-2 py-1 text-sm transition-opacity hover:opacity-70"
+          style={{ borderColor: 'var(--border)', color: 'var(--fg)', background: 'var(--bg)' }}
+          aria-label="回首頁"
+          title="回首頁"
+        >
+          🏠
+        </Link>
 
       </div>
 
