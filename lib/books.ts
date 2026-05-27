@@ -100,6 +100,10 @@ export function getAllBooks(): BookMeta[] {
   return [...getNovels(), ...getReviews()];
 }
 
+export function getAllBooksWithChapters(): Book[] {
+  return [...loadNovels(), ...loadReviews()];
+}
+
 export function getBook(slug: string): Book | undefined {
   return (
     loadNovels().find((b) => b.slug === slug) ??

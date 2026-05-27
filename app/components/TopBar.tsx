@@ -118,6 +118,17 @@ export default function TopBar({ novels, reviews }: Props) {
           🏠
         </Link>
 
+        {/* 字數統計 */}
+        <Link
+          href="/stats/"
+          className="rounded border px-2 py-1 text-sm transition-opacity hover:opacity-70"
+          style={{ borderColor: 'var(--border)', color: 'var(--fg)', background: 'var(--bg)' }}
+          aria-label="字數統計"
+          title="字數統計"
+        >
+          📊
+        </Link>
+
       </div>
 
       <div className="flex items-center gap-3">
