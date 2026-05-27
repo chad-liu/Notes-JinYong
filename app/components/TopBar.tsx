@@ -129,6 +129,17 @@ export default function TopBar({ novels, reviews }: Props) {
           📊
         </Link>
 
+        {/* 門派總覽 */}
+        <Link
+          href="/sects/"
+          className="rounded border px-2 py-1 text-sm transition-opacity hover:opacity-70"
+          style={{ borderColor: 'var(--border)', color: 'var(--fg)', background: 'var(--bg)' }}
+          aria-label="門派總覽"
+          title="門派總覽"
+        >
+          ⚔️
+        </Link>
+
       </div>
 
       <div className="flex items-center gap-3">
