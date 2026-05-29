@@ -140,6 +140,14 @@ export default function TopBar({ novels, reviews }: Props) {
           ⚔️
         </Link>
 
+        {/* 預留按鈕 */}
+        <button
+          className="rounded border px-2 py-1 text-sm transition-opacity hover:opacity-70"
+          style={{ borderColor: 'var(--border)', color: 'var(--fg)', background: 'var(--bg)' }}
+        >
+
+        </button>
+
       </div>
 
       <div className="flex items-center gap-3">
